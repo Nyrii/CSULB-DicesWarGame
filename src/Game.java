@@ -34,6 +34,7 @@ public class Game {
                 this.play();
                 break;
             case 2:
+                System.out.println("Number of played games : " + this.gamesNumber);
                 System.out.println("The player won " + this.player.getWonGames() + " game(s).");
                 System.out.println("The AI won " + this.computer.getWonGames() + " game(s).");
                 this.displayMenu();
@@ -101,6 +102,8 @@ public class Game {
         } else {
             System.out.println("This is a TIE.");
         }
+
+        this.gamesNumber += 1;
 
         this.init();
     }
